@@ -1,0 +1,17 @@
+.app {
+  text-align: center;
+  font-family: Arial;
+  background: #fff5f9;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+h1 {
+  color: #b30059;
+}
+
+.status {
+  font-size: 18px;
+  font-weight: bold;
+  color: #b30059;
+}
