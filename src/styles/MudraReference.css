@@ -1,0 +1,403 @@
+/* MudraReference Component Styles */
+
+.mudra-reference {
+  width: 100%;
+  background: white;
+  border-radius: var(--radius-lg);
+  box-shadow: 0 8px 24px rgba(255, 149, 0, 0.1);
+  overflow: hidden;
+}
+
+.reference-container {
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  min-height: 600px;
+}
+
+/* Sidebar */
+.mudra-list-sidebar {
+  background: linear-gradient(180deg, var(--very-light-orange) 0%, white 100%);
+  border-right: 2px solid var(--light-orange);
+  padding: var(--spacing-lg);
+  overflow-y: auto;
+  max-height: 80vh;
+}
+
+.filter-section {
+  margin-bottom: var(--spacing-xl);
+}
+
+.filter-section h3 {
+  color: var(--primary-orange);
+  font-size: var(--font-size-base);
+  margin-bottom: var(--spacing-md);
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+.filter-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm);
+}
+
+.filter-btn {
+  padding: var(--spacing-sm) var(--spacing-md);
+  border: 2px solid var(--light-orange);
+  background: white;
+  color: var(--primary-orange);
+  border-radius: var(--radius-md);
+  font-size: var(--font-size-sm);
+  font-weight: 600;
+  cursor: pointer;
+  transition: all var(--transition-base);
+  letter-spacing: 0.5px;
+}
+
+.filter-btn:hover {
+  background: var(--light-orange);
+  border-color: var(--primary-orange);
+}
+
+.filter-btn.active {
+  background: linear-gradient(135deg, var(--primary-orange), var(--secondary-orange));
+  color: white;
+  border-color: var(--secondary-orange);
+}
+
+/* Mudra List */
+.mudra-list {
+  margin-top: var(--spacing-xl);
+}
+
+.mudra-list h3 {
+  color: var(--primary-orange);
+  font-size: var(--font-size-base);
+  margin-bottom: var(--spacing-md);
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+.mudra-list-item {
+  padding: var(--spacing-md);
+  margin-bottom: var(--spacing-sm);
+  border-left: 3px solid transparent;
+  border-radius: var(--radius-md);
+  background: white;
+  cursor: pointer;
+  transition: all var(--transition-base);
+}
+
+.mudra-list-item:hover {
+  background: var(--light-orange);
+  border-left-color: var(--primary-orange);
+  transform: translateX(4px);
+}
+
+.mudra-list-item.active {
+  background: linear-gradient(135deg, var(--primary-orange), var(--secondary-orange));
+  color: white;
+  border-left-color: white;
+  box-shadow: 0 4px 12px rgba(255, 149, 0, 0.2);
+}
+
+.mudra-item-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: var(--spacing-sm);
+  margin-bottom: var(--spacing-xs);
+}
+
+.mudra-list-name {
+  font-weight: 700;
+  color: inherit;
+  font-size: var(--font-size-sm);
+}
+
+.mudra-list-item.active .mudra-list-name {
+  color: white;
+}
+
+.mudra-english {
+  font-size: var(--font-size-sm);
+  color: var(--dark-gray);
+  font-weight: 500;
+}
+
+.mudra-list-item.active .mudra-english {
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.difficulty-badge {
+  display: inline-block;
+  padding: var(--spacing-xs) var(--spacing-sm);
+  border-radius: 4px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+.difficulty-easy {
+  background: #e8f5e9;
+  color: var(--success);
+}
+
+.difficulty-medium {
+  background: #fff3e0;
+  color: var(--warning);
+}
+
+.difficulty-hard {
+  background: #ffebee;
+  color: var(--error);
+}
+
+.mudra-list-item.active .difficulty-badge {
+  background: rgba(255, 255, 255, 0.3);
+  color: white;
+}
+
+/* Main Content */
+.mudra-detail {
+  padding: var(--spacing-2xl);
+  overflow-y: auto;
+  max-height: 80vh;
+}
+
+.mudra-header {
+  margin-bottom: var(--spacing-xl);
+  padding-bottom: var(--spacing-lg);
+  border-bottom: 2px solid var(--light-orange);
+}
+
+.mudra-detail h2 {
+  color: var(--primary-orange);
+  font-size: var(--font-size-2xl);
+  margin-bottom: var(--spacing-md);
+  letter-spacing: 0.5px;
+}
+
+.english-name {
+  color: var(--dark-gray);
+  font-size: var(--font-size-lg);
+  font-style: italic;
+  margin-bottom: var(--spacing-md);
+}
+
+.mudra-detail .difficulty-badge {
+  display: inline-block;
+  margin-top: var(--spacing-md);
+}
+
+/* Mudra Content */
+.mudra-content {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-xl);
+}
+
+.mudra-visual {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, var(--very-light-orange), #fff9e6);
+  border-radius: var(--radius-lg);
+  min-height: 300px;
+  border: 2px dashed var(--light-orange);
+}
+
+.placeholder-image {
+  text-align: center;
+}
+
+.placeholder-image span {
+  font-size: 4rem;
+  display: block;
+  margin-bottom: var(--spacing-md);
+}
+
+.placeholder-image p {
+  color: var(--primary-orange);
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+/* Info Cards Grid */
+.info-cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--spacing-lg);
+}
+
+.info-card {
+  background: var(--very-light-orange);
+  padding: var(--spacing-lg);
+  border-radius: var(--radius-md);
+  border: 1px solid var(--light-orange);
+  transition: all var(--transition-base);
+}
+
+.info-card:hover {
+  box-shadow: 0 4px 12px rgba(255, 149, 0, 0.15);
+  border-color: var(--primary-orange);
+}
+
+.info-card h4 {
+  color: var(--primary-orange);
+  font-size: var(--font-size-base);
+  margin-bottom: var(--spacing-md);
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+.info-card p {
+  color: var(--dark-gray);
+  line-height: 1.6;
+  font-size: var(--font-size-sm);
+}
+
+/* Uses Card */
+.uses-card {
+  grid-column: 1 / -1;
+}
+
+.uses-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-md);
+}
+
+.use-tag {
+  background: linear-gradient(135deg, var(--primary-orange), var(--secondary-orange));
+  color: white;
+  padding: var(--spacing-sm) var(--spacing-md);
+  border-radius: var(--radius-md);
+  font-size: var(--font-size-sm);
+  font-weight: 500;
+  letter-spacing: 0.5px;
+}
+
+/* Practice Section */
+.practice-section {
+  display: flex;
+  justify-content: center;
+  padding: var(--spacing-lg);
+  background: linear-gradient(135deg, var(--very-light-orange), #fff9e6);
+  border-radius: var(--radius-lg);
+  border: 2px dashed var(--primary-orange);
+}
+
+.practice-btn {
+  padding: var(--spacing-md) var(--spacing-xl);
+  background: linear-gradient(135deg, var(--primary-orange), var(--secondary-orange));
+  color: white;
+  border: none;
+  border-radius: var(--radius-lg);
+  font-size: var(--font-size-base);
+  font-weight: 700;
+  cursor: pointer;
+  transition: all var(--transition-base);
+  letter-spacing: 0.5px;
+  box-shadow: 0 4px 12px rgba(255, 149, 0, 0.2);
+}
+
+.practice-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(255, 149, 0, 0.3);
+}
+
+.practice-btn:active {
+  transform: translateY(0);
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .reference-container {
+    grid-template-columns: 250px 1fr;
+  }
+
+  .mudra-detail {
+    padding: var(--spacing-lg);
+  }
+
+  .info-cards {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .reference-container {
+    grid-template-columns: 1fr;
+    min-height: auto;
+  }
+
+  .mudra-list-sidebar {
+    border-right: none;
+    border-bottom: 2px solid var(--light-orange);
+    max-height: 300px;
+    padding: var(--spacing-md);
+  }
+
+  .mudra-detail {
+    max-height: none;
+    padding: var(--spacing-lg);
+  }
+
+  .mudra-detail h2 {
+    font-size: var(--font-size-xl);
+  }
+
+  .mudra-visual {
+    min-height: 200px;
+  }
+
+  .placeholder-image span {
+    font-size: 3rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .mudra-list-sidebar {
+    padding: var(--spacing-sm);
+  }
+
+  .mudra-list-item {
+    padding: var(--spacing-sm);
+    margin-bottom: var(--spacing-xs);
+  }
+
+  .mudra-detail {
+    padding: var(--spacing-md);
+  }
+
+  .mudra-detail h2 {
+    font-size: var(--font-size-lg);
+  }
+
+  .english-name {
+    font-size: var(--font-size-base);
+  }
+
+  .mudra-visual {
+    min-height: 150px;
+  }
+
+  .placeholder-image span {
+    font-size: 2.5rem;
+  }
+
+  .info-cards {
+    gap: var(--spacing-md);
+  }
+
+  .uses-list {
+    gap: var(--spacing-sm);
+  }
+
+  .use-tag {
+    padding: var(--spacing-xs) var(--spacing-sm);
+    font-size: 0.75rem;
+  }
+}

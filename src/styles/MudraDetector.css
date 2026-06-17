@@ -1,0 +1,448 @@
+/* Enhanced MudraDetector Styles - Recording & ML Features */
+
+/* Comparison Card */
+.comparison-card {
+  background: linear-gradient(135deg, #fff9e6, #fffaf0);
+  border-top: 3px solid var(--primary-orange);
+}
+
+.comparison-content {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+  margin-top: var(--spacing-md);
+}
+
+.mudra-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--spacing-md);
+  background: white;
+  border-radius: var(--radius-md);
+  border-left: 3px solid var(--primary-orange);
+}
+
+.mudra-row .label {
+  font-weight: 600;
+  color: var(--dark-gray);
+  font-size: var(--font-size-sm);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.mudra-row .mudra-name {
+  font-weight: 700;
+  font-size: var(--font-size-base);
+  color: var(--primary-orange);
+}
+
+.feedback {
+  padding: var(--spacing-md);
+  border-radius: var(--radius-md);
+  background: white;
+  text-align: center;
+  font-weight: 600;
+  font-size: var(--font-size-sm);
+  margin: 0;
+}
+
+/* ML Accuracy Card */
+.ml-accuracy-display {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: var(--spacing-lg) 0;
+  position: relative;
+}
+
+.accuracy-ring {
+  position: relative;
+  width: 120px;
+  height: 120px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.accuracy-text {
+  position: absolute;
+  font-size: var(--font-size-xl);
+  font-weight: 700;
+  color: var(--primary-orange);
+  text-align: center;
+}
+
+.accuracy-ring svg {
+  filter: drop-shadow(0 2px 4px rgba(255, 149, 0, 0.1));
+}
+
+.accuracy-label {
+  text-align: center;
+  font-weight: 600;
+  color: var(--primary-orange);
+  margin: var(--spacing-md) 0 0 0;
+}
+
+/* Recording Card */
+.recording-card {
+  background: linear-gradient(135deg, #ffebee, #ffcdd2);
+  border-left-color: var(--error);
+}
+
+.recording-card h3 {
+  color: var(--error);
+}
+
+.record-btn {
+  width: 100%;
+  padding: var(--spacing-lg);
+  background: white;
+  border: 2px solid var(--error);
+  border-radius: var(--radius-lg);
+  font-size: var(--font-size-base);
+  font-weight: 700;
+  color: var(--error);
+  cursor: pointer;
+  transition: all var(--transition-base);
+  letter-spacing: 0.5px;
+  margin-top: var(--spacing-md);
+  text-transform: uppercase;
+}
+
+.record-btn:hover {
+  background: var(--error);
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(231, 76, 60, 0.3);
+}
+
+.record-btn.recording {
+  background: var(--error);
+  color: white;
+  animation: pulse 1.5s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    box-shadow: 0 0 0 0 rgba(231, 76, 60, 0.7);
+  }
+  50% {
+    box-shadow: 0 0 0 8px rgba(231, 76, 60, 0.1);
+  }
+}
+
+.recording-info {
+  margin-top: var(--spacing-md);
+  text-align: center;
+  color: var(--error);
+  font-weight: 600;
+  font-size: var(--font-size-sm);
+  animation: blink 1s ease-in-out infinite;
+}
+
+@keyframes blink {
+  0%,
+  50% {
+    opacity: 1;
+  }
+  51%,
+  100% {
+    opacity: 0.6;
+  }
+}
+
+/* Sessions Section */
+.sessions-section {
+  background: white;
+  padding: var(--spacing-lg);
+  border-radius: var(--radius-lg);
+  box-shadow: 0 4px 12px rgba(255, 149, 0, 0.1);
+  border-top: 3px solid var(--primary-orange);
+  margin-top: var(--spacing-xl);
+}
+
+.sessions-section h3 {
+  color: var(--primary-orange);
+  font-size: var(--font-size-lg);
+  margin-bottom: var(--spacing-lg);
+  letter-spacing: 0.5px;
+}
+
+.sessions-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-lg);
+  max-height: 400px;
+  overflow-y: auto;
+}
+
+.session-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--spacing-lg);
+  background: linear-gradient(135deg, var(--very-light-orange), #fff9e6);
+  border-radius: var(--radius-md);
+  border-left: 3px solid var(--primary-orange);
+  transition: all var(--transition-base);
+}
+
+.session-card:hover {
+  box-shadow: 0 4px 12px rgba(255, 149, 0, 0.15);
+  transform: translateX(4px);
+}
+
+.session-info {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm);
+  flex: 1;
+}
+
+.session-date {
+  font-size: var(--font-size-sm);
+  color: var(--dark-gray);
+  font-weight: 600;
+}
+
+.session-mudra {
+  font-size: var(--font-size-lg);
+  font-weight: 700;
+  color: var(--primary-orange);
+}
+
+.session-accuracy {
+  display: inline-block;
+  background: var(--primary-orange);
+  color: white;
+  padding: var(--spacing-xs) var(--spacing-md);
+  border-radius: 20px;
+  font-weight: 700;
+  font-size: var(--font-size-sm);
+  width: fit-content;
+}
+
+.session-actions {
+  display: flex;
+  gap: var(--spacing-md);
+  margin-left: auto;
+}
+
+.download-btn,
+.play-btn {
+  padding: var(--spacing-sm) var(--spacing-md);
+  border: 2px solid var(--primary-orange);
+  background: white;
+  color: var(--primary-orange);
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  font-size: var(--font-size-sm);
+  font-weight: 600;
+  transition: all var(--transition-base);
+  white-space: nowrap;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: var(--spacing-xs);
+}
+
+.download-btn:hover,
+.play-btn:hover {
+  background: var(--light-orange);
+  border-color: var(--secondary-orange);
+  transform: translateY(-2px);
+}
+
+.download-btn:active,
+.play-btn:active {
+  transform: translateY(0);
+}
+
+/* Mudra Card Enhancement */
+.mudra-card {
+  background: linear-gradient(135deg, var(--very-light-orange), #fffaf0);
+  border-left-color: var(--secondary-orange);
+}
+
+.mudra-card h3 {
+  color: var(--secondary-orange);
+}
+
+/* Enhanced Confidence Card */
+.confidence-card {
+  border-left-color: var(--primary-yellow);
+}
+
+.confidence-card h3 {
+  color: var(--primary-orange);
+}
+
+/* Scrollbar for sessions list */
+.sessions-list::-webkit-scrollbar {
+  width: 8px;
+}
+
+.sessions-list::-webkit-scrollbar-track {
+  background: var(--light-orange);
+  border-radius: 4px;
+}
+
+.sessions-list::-webkit-scrollbar-thumb {
+  background: var(--primary-orange);
+  border-radius: 4px;
+}
+
+.sessions-list::-webkit-scrollbar-thumb:hover {
+  background: var(--secondary-orange);
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .session-card {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .session-actions {
+    width: 100%;
+    margin-left: 0;
+    margin-top: var(--spacing-md);
+  }
+
+  .download-btn,
+  .play-btn {
+    flex: 1;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .sessions-section {
+    padding: var(--spacing-md);
+  }
+
+  .sessions-list {
+    max-height: 300px;
+  }
+
+  .session-card {
+    padding: var(--spacing-md);
+  }
+
+  .mudra-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--spacing-sm);
+  }
+
+  .mudra-row .label,
+  .mudra-row .mudra-name {
+    width: 100%;
+  }
+
+  .session-info {
+    width: 100%;
+  }
+
+  .accuracy-ring {
+    width: 100px;
+    height: 100px;
+  }
+
+  .accuracy-text {
+    font-size: var(--font-size-lg);
+  }
+
+  .record-btn {
+    padding: var(--spacing-md);
+    font-size: var(--font-size-sm);
+  }
+
+  .feedback {
+    font-size: var(--font-size-xs);
+  }
+}
+
+@media (max-width: 480px) {
+  .sessions-list {
+    max-height: 250px;
+  }
+
+  .session-card {
+    padding: var(--spacing-sm);
+  }
+
+  .session-date {
+    font-size: 0.75rem;
+  }
+
+  .session-mudra {
+    font-size: var(--font-size-base);
+  }
+
+  .session-actions {
+    width: 100%;
+    gap: var(--spacing-sm);
+  }
+
+  .download-btn,
+  .play-btn {
+    padding: var(--spacing-xs) var(--spacing-sm);
+    font-size: 0.75rem;
+    flex: 1;
+  }
+
+  .accuracy-ring {
+    width: 80px;
+    height: 80px;
+  }
+
+  .accuracy-text {
+    font-size: var(--font-size-base);
+  }
+
+  .record-btn {
+    padding: var(--spacing-md);
+    font-size: var(--font-size-sm);
+  }
+
+  .comparison-content {
+    gap: var(--spacing-sm);
+  }
+
+  .mudra-row {
+    padding: var(--spacing-sm);
+  }
+}
+
+/* Dark mode support (optional) */
+@media (prefers-color-scheme: dark) {
+  .session-card,
+  .mudra-row {
+    background: #2c3e50;
+    color: white;
+  }
+
+  .session-date,
+  .mudra-row .label {
+    color: #ecf0f1;
+  }
+
+  .feedback {
+    background: #34495e;
+    color: white;
+  }
+
+  .record-btn {
+    background: white;
+    color: var(--error);
+  }
+
+  .record-btn.recording,
+  .record-btn:hover {
+    background: var(--error);
+    color: white;
+  }
+}
