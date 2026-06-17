@@ -1,16 +1,16 @@
-# React + Vite
+# Hastify – Bharatanatyam Mudra Recognition
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Hastify is an AI-powered Bharatanatyam mudra recognition system that uses Computer Vision and Machine Learning to detect and classify hand gestures in real time. The application captures hand landmarks using MediaPipe Hands and identifies traditional Bharatanatyam mudras through a trained Scikit-learn model.
 
-Currently, two official plugins are available:
+## Features
+- Real-time hand tracking using MediaPipe
+- Bharatanatyam mudra recognition through Machine Learning
+- Webcam-based gesture detection
+- Interactive and user-friendly interface
+- FastAPI backend for model inference
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
-
-## React Compiler
-
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Tech Stack
+- React + Vite
+- FastAPI
+- Scikit-learn
+- MediaPipe Hands
