@@ -14,6 +14,40 @@
   min-height: 600px;
 }
 
+/* Search Box */
+.search-section {
+  margin-bottom: var(--spacing-lg);
+}
+
+.mudra-search-input {
+  width: 100%;
+  padding: var(--spacing-md);
+  border: 2px solid var(--light-orange);
+  border-radius: var(--radius-md);
+  font-size: var(--font-size-sm);
+  color: var(--dark-gray);
+  background: white;
+  transition: all var(--transition-base);
+}
+
+.mudra-search-input:focus {
+  outline: none;
+  border-color: var(--primary-orange);
+  box-shadow: 0 0 0 3px rgba(255, 149, 0, 0.1);
+}
+
+.mudra-search-input::placeholder {
+  color: #b0a99f;
+}
+
+.no-results {
+  color: var(--dark-gray);
+  font-style: italic;
+  font-size: var(--font-size-sm);
+  padding: var(--spacing-md) 0;
+  text-align: center;
+}
+
 /* Sidebar */
 .mudra-list-sidebar {
   background: linear-gradient(180deg, var(--very-light-orange) 0%, white 100%);

@@ -2,20 +2,39 @@ import { useState } from "react";
 import { mudraDatabase, getMudrasByDifficulty } from "../utils/mudraDatabase";
 import "../styles/MudraReference.css";
 
-function MudraReference() {
+function MudraReference({ onPracticeMudra }) {
   const [selectedMudra, setSelectedMudra] = useState(mudraDatabase[0]);
   const [filterDifficulty, setFilterDifficulty] = useState("All");
+  const [searchTerm, setSearchTerm] = useState("");
 
-  const filteredMudras =
+  const filteredMudras = (
     filterDifficulty === "All"
       ? mudraDatabase
-      : getMudrasByDifficulty(filterDifficulty);
+      : getMudrasByDifficulty(filterDifficulty)
+  ).filter((mudra) => {
+    if (!searchTerm.trim()) return true;
+    const term = searchTerm.toLowerCase();
+    return (
+      mudra.name.toLowerCase().includes(term) ||
+      mudra.englishName.toLowerCase().includes(term)
+    );
+  });
 
   return (
     <div className="mudra-reference">
       <div className="reference-container">
         {/* Sidebar with mudra list */}
         <div className="mudra-list-sidebar">
+          <div className="search-section">
+            <input
+              type="text"
+              className="mudra-search-input"
+              placeholder="🔍 Search mudras (e.g. Mayura, Peacock)..."
+              value={searchTerm}
+              onChange={(e) => setSearchTerm(e.target.value)}
+            />
+          </div>
+
           <div className="filter-section">
             <h3>Filter by Difficulty</h3>
             <div className="filter-buttons">
@@ -35,6 +54,9 @@ function MudraReference() {
 
           <div className="mudra-list">
             <h3>Mudras ({filteredMudras.length})</h3>
+            {filteredMudras.length === 0 && (
+              <p className="no-results">No mudras match "{searchTerm}"</p>
+            )}
             {filteredMudras.map((mudra) => (
               <div
                 key={mudra.id}
@@ -114,7 +136,10 @@ function MudraReference() {
 
             {/* Practice button */}
             <div className="practice-section">
-              <button className="practice-btn">
+              <button
+                className="practice-btn"
+                onClick={() => onPracticeMudra && onPracticeMudra(selectedMudra.name)}
+              >
                 📹 Practice This Mudra
               </button>
             </div>
